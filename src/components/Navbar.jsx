@@ -27,14 +27,9 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <motion.nav
-      className={`navbar ${scrolled ? 'scrolled' : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-    >
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <Link to="/" className="nav-logo">
+        <Link to="/" className="nav-logo" onClick={() => setMobileOpen(false)}>
           <img src={logo} alt="High Land Origin Logo" />
           <div className="nav-brand">
             <span className="nav-brand-name">HIGH LAND ORIGIN</span>
@@ -48,11 +43,12 @@ export default function Navbar() {
               key={item.path}
               to={item.path}
               className={location.pathname === item.path ? 'active' : ''}
+              onClick={() => setMobileOpen(false)}
             >
               {item.label}
             </Link>
           ))}
-          <Link to="/contact" className="nav-cta">Get Quote</Link>
+          <Link to="/contact" className="nav-cta" onClick={() => setMobileOpen(false)}>Get Quote</Link>
         </div>
 
         <button
@@ -65,6 +61,6 @@ export default function Navbar() {
           <span></span>
         </button>
       </div>
-    </motion.nav>
+    </nav>
   )
 }
