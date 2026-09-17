@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/Newlogo.jpeg'
 
 export default function Footer() {
   return (
@@ -7,7 +7,13 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src={logo} alt="High Land Origin" className="footer-logo" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.5rem' }}>
+              <img src={logo} alt="Highland Origin" className="footer-logo" style={{ marginBottom: 0, height: '75px', width: 'auto', borderRadius: '4px' }} />
+              <div className="nav-brand">
+                <span className="nav-brand-name" style={{ color: '#fff' }}>HIGHLAND ORIGIN</span>
+                <span className="nav-brand-sub" style={{ color: 'var(--text-muted)' }}>Private Limited</span>
+              </div>
+            </div>
             <p>
               India's premier green coffee exporter, sourcing the finest beans from
               the highland plantations of the Western Ghats. Committed to quality,
@@ -44,26 +50,22 @@ export default function Footer() {
             <Link to="/">Home</Link>
             <Link to="/about">About Us</Link>
             <Link to="/products">Our Coffee</Link>
-            <Link to="/sustainability">Sustainability</Link>
-            <Link to="/infrastructure">Infrastructure</Link>
+            <Link to="/export">Coffee Export</Link>
             <Link to="/contact">Contact</Link>
           </div>
 
           <div className="footer-col">
             <h4>Our Coffee</h4>
-            <Link to="/products">Arabica Plantation</Link>
-            <Link to="/products">Robusta Cherry</Link>
-            <Link to="/products">Monsooned Malabar</Link>
-            <Link to="/products">Specialty Grade</Link>
-            <Link to="/products">Robusta Parchment</Link>
-            <Link to="/products">Peaberry</Link>
+            <Link to="/products/arabica">Arabica Plantation</Link>
+            <Link to="/products/robusta">Robusta Parchment</Link>
+            <Link to="/products/specialty">Speciality Beans</Link>
           </div>
 
           <div className="footer-col footer-contact-col">
             <h4>Get in Touch</h4>
             <div className="footer-contact-details">
               <p className="footer-address">
-                <strong>HIGH LAND ORIGIN PRIVATE LIMITED</strong><br />
+                <strong>Highland ORIGIN PRIVATE LIMITED</strong><br />
                 Chennai, Tamil Nadu, India
               </p>
               <p className="footer-contact-item">
@@ -77,7 +79,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} High Land Origin Private Limited. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Highland Origin Private Limited. All rights reserved.</p>
           <div className="footer-certs">
             <span className="footer-cert">ISO 22000</span>
             <span className="footer-cert">FSSAI</span>

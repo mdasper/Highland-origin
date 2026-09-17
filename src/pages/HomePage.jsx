@@ -12,6 +12,7 @@ import facilityImg from '../assets/images/facility.jpg'
 import qualityLabImg from '../assets/images/quality_lab.jpg'
 import warehouseImg from '../assets/images/warehouse.jpg'
 import plantationHillsImg from '../assets/images/sourcing.jpg'
+import { productCategories } from './ProductsPage'
 
 function AnimatedCounter({ target, suffix = '' }) {
   const [count, setCount] = useState(0)
@@ -75,32 +76,7 @@ function Particles() {
   )
 }
 
-const products = [
-  {
-    title: 'Arabica Plantation',
-    origin: 'Western Ghats, India',
-    desc: 'Grown at elevations above 900m, our Arabica beans deliver a smooth, nuanced cup with notes of chocolate and citrus.',
-    image: arabicaImg,
-  },
-  {
-    title: 'Robusta Cherry AB',
-    origin: 'Coorg & Wayanad',
-    desc: 'Bold and full-bodied, our Robusta cherry beans are known for their rich crema and earthy depth — perfect for espresso blends.',
-    image: robustaImg,
-  },
-  {
-    title: 'Monsooned Malabar AA',
-    origin: 'Malabar Coast',
-    desc: 'A uniquely Indian specialty — exposed to monsoon winds for 12–16 weeks, creating a mellow, low-acid cup with a golden hue.',
-    image: monsoonedImg,
-  },
-  {
-    title: 'Specialty & Single Estate',
-    origin: 'Select Highland Estates',
-    desc: 'Micro-lot coffees scored 80+ by Q-graders, sourced from single estates in the Nilgiris and Bababudangiris ranges.',
-    image: specialtyImg,
-  },
-]
+
 
 const processSteps = [
   {
@@ -142,8 +118,6 @@ const processSteps = [
 ]
 
 const whyItems = [
-  { icon: '◆', title: 'Unmatched Quality Control', desc: 'Every lot undergoes rigorous cupping, grading, and lab analysis. Our Q-certified cuppers ensure only the finest beans bear our name.' },
-  { icon: '◈', title: 'Direct From Origin', desc: 'We work directly with highland farmers across Karnataka, Kerala, and Tamil Nadu — cutting middlemen, ensuring traceability.' },
   { icon: '◉', title: 'Competitive Global Pricing', desc: 'Our strategic sourcing network and efficient processing enable us to offer premium quality at globally competitive prices.' },
   { icon: '⬡', title: 'Timely & Reliable Delivery', desc: 'Proximity to major Indian ports ensures on-time shipments with real-time tracking and seamless documentation.' },
   { icon: '✦', title: 'Sustainable & Ethical', desc: 'Our farmer partnerships prioritize fair wages, shade-grown methods, and organic practices that protect both people and planet.' },
@@ -187,7 +161,7 @@ export default function HomePage() {
             <span className="gold">To the World's Finest Cups</span>
           </h1>
           <p className="hero-desc">
-            High Land Origin Private Limited — India's trusted exporter of premium
+            Highland Origin Private Limited — India's trusted exporter of premium
             green coffee beans, sourcing exceptional Arabica, Robusta & Specialty
             coffees from the Western Ghats.
           </p>
@@ -202,16 +176,7 @@ export default function HomePage() {
       <section className="stats" id="stats">
         <div className="container">
           <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number"><AnimatedCounter target={100} suffix="%" /></div>
-              <div className="stat-label">Direct Farm Sourced</div>
-              <div className="stat-divider" />
-            </div>
-            <div className="stat-item">
-              <div className="stat-number"><AnimatedCounter target={80} suffix="+" /></div>
-              <div className="stat-label">SCA Specialty Score</div>
-              <div className="stat-divider" />
-            </div>
+
             <div className="stat-item">
               <div className="stat-number"><AnimatedCounter target={5} suffix="+" /></div>
               <div className="stat-label">Western Ghats Origins</div>
@@ -244,7 +209,7 @@ export default function HomePage() {
                 <h2 className="section-title">Rooted in Heritage, Reaching the World</h2>
                 <p className="section-subtitle">Where altitude meets attitude — crafting India's finest green coffee for the global market.</p>
                 <p className="about-text">
-                  High Land Origin Private Limited was founded with a singular vision: to bring
+                  Highland Origin Private Limited was founded with a singular vision: to bring
                   the exceptional coffees grown in India's highland regions to discerning roasters
                   and importers worldwide. Our deep-rooted connections with farming communities
                   across the Western Ghats give us unparalleled access to the finest green coffee
@@ -252,7 +217,7 @@ export default function HomePage() {
                 </p>
                 <p className="about-text">
                   From the mist-covered estates of Chikmagalur and Coorg to the lush plantations
-                  of Wayanad and Nilgiris, every bean we export carries the essence of its origin
+                  of Wayanad and Nilgiris, Kodaikanal. Every bean we export carries the essence of its origin
                   — rich soil, pristine air, and generations of expertise.
                 </p>
                 <div className="about-features">
@@ -293,16 +258,15 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
           <div className="products-grid">
-            {products.map((p, i) => (
+            {productCategories.map((p, i) => (
               <ScrollReveal key={p.title} delay={i * 0.15}>
-                <Link to="/products" className="product-card">
+                <Link to={`/products/${p.id}`} className="product-card">
                   <div className="product-card-image">
                     <img src={p.image} alt={p.title} />
                   </div>
                   <div className="product-card-body">
-                    <div className="product-card-origin">{p.origin}</div>
                     <h3 className="product-card-title">{p.title}</h3>
-                    <p className="product-card-desc">{p.desc}</p>
+                    <p className="product-card-desc">Explore our premium range of {p.title} coffee, carefully sourced and graded for global export.</p>
                     <div className="product-card-link">
                       <span>View Specifications</span>
                       <span className="arrow">→</span>
@@ -339,61 +303,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Process - From Farm to Shipment */}
-      <section className="process" id="process">
-        <div className="container">
-          <ScrollReveal>
-            <div className="process-header">
-              <div className="section-label" style={{ justifyContent: 'center' }}>Our Process</div>
-              <h2>From Farm to Shipment</h2>
-              <p className="section-subtitle">A meticulous, transparent journey ensuring every green coffee bean meets the highest global export benchmarks.</p>
-            </div>
-          </ScrollReveal>
 
-          <div className="process-journey">
-            <div className="process-line-track" />
-            {processSteps.map((step, i) => {
-              const isEven = i % 2 === 1
-              return (
-                <div key={step.num} className={`process-step-row ${isEven ? 'row-reversed' : ''}`}>
-                  {/* Image side - clean without any stage tag */}
-                  <ScrollReveal direction={isEven ? 'right' : 'left'} delay={0.1}>
-                    <div className="process-media-card">
-                      <div className="process-media-wrapper">
-                        <img src={step.image} alt={step.imageAlt} />
-                        <div className="process-media-overlay" />
-                      </div>
-                    </div>
-                  </ScrollReveal>
-
-                  {/* Step Node indicator in center */}
-                  <div className="process-node">
-                    <span className="process-node-number">{step.num}</span>
-                    <div className="process-node-pulse" />
-                  </div>
-
-                  {/* Content side - clean without stage badge */}
-                  <ScrollReveal direction={isEven ? 'left' : 'right'} delay={0.2}>
-                    <div className="process-info-card">
-                      <div className="process-info-subtitle">{step.subtitle}</div>
-                      <h3 className="process-info-title">{step.title}</h3>
-                      <p className="process-info-desc">{step.desc}</p>
-                      <div className="process-highlights">
-                        {step.highlights.map(h => (
-                          <div key={h} className="process-pill">
-                            <span className="pill-dot" />
-                            <span>{h}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* Global Reach */}
       <section className="global-reach" id="global-reach">
@@ -413,35 +323,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="testimonials" id="testimonials">
-        <div className="container">
-          <ScrollReveal>
-            <div className="testimonials-header">
-              <div className="section-label" style={{ justifyContent: 'center' }}>Client Voices</div>
-              <h2>Trusted by Roasters Worldwide</h2>
-              <p className="section-subtitle">Hear from our global partners who trust Highland Origin for their sourcing needs.</p>
-            </div>
-          </ScrollReveal>
-          <div className="testimonials-grid">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={t.name} delay={i * 0.15}>
-                <div className="testimonial-card">
-                  <div className="testimonial-quote">"</div>
-                  <p className="testimonial-text">{t.text}</p>
-                  <div className="testimonial-author">
-                    <div className="testimonial-avatar">{t.initial}</div>
-                    <div>
-                      <div className="testimonial-name">{t.name}</div>
-                      <div className="testimonial-role">{t.role}</div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="cta-section" id="cta">

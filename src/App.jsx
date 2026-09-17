@@ -11,6 +11,9 @@ import ProductsPage from './pages/ProductsPage'
 import SustainabilityPage from './pages/SustainabilityPage'
 import InfrastructurePage from './pages/InfrastructurePage'
 import ContactPage from './pages/ContactPage'
+import CoffeeExportPage from './pages/CoffeeExportPage'
+
+import CategoryPage from './pages/CategoryPage'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -43,8 +46,8 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/products" element={<ProductsPage />} />
-                <Route path="/sustainability" element={<SustainabilityPage />} />
-                <Route path="/infrastructure" element={<InfrastructurePage />} />
+                <Route path="/products/:categoryId" element={<CategoryPage />} />
+                <Route path="/export" element={<CoffeeExportPage />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </AnimatePresence>

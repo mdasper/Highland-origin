@@ -1,72 +1,66 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import ScrollReveal from '../components/ScrollReveal'
+
+// Main Images
 import arabicaImg from '../assets/images/arabica.jpg'
 import robustaImg from '../assets/images/robusta.jpg'
-import greenBeansImg from '../assets/images/green_beans.jpg'
-import monsoonedImg from '../assets/images/monsooned.jpg'
 import specialtyImg from '../assets/images/specialty.jpg'
 import estateHarvestImg from '../assets/images/farmer.jpg'
 
-const allProducts = [
-  {
-    id: 1, category: 'arabica', badge: 'Premium',
-    title: 'Arabica Plantation A', origin: 'Chikmagalur, Karnataka',
-    desc: 'Clean cup with medium body, bright acidity, and notes of milk chocolate, citrus, and caramel. Ideal for filter brewing and single-origin roasts.',
-    image: arabicaImg,
-    specs: { altitude: '900–1,400m', process: 'Washed', screen: '17/18', moisture: '10–12%' },
-  },
-  {
-    id: 2, category: 'arabica', badge: 'Specialty',
-    title: 'Arabica Plantation PB', origin: 'Bababudangiris',
-    desc: 'Peaberry selection with concentrated flavors — sweet, complex, with wine-like acidity and a lingering finish of dark berries and spice.',
-    image: greenBeansImg,
-    specs: { altitude: '1,000–1,500m', process: 'Washed', screen: 'PB', moisture: '10–11%' },
-  },
-  {
-    id: 3, category: 'robusta', badge: 'Best Seller',
-    title: 'Robusta Cherry AB', origin: 'Coorg & Wayanad',
-    desc: 'Full-bodied with excellent crema potential. Strong, earthy flavor with notes of dark chocolate and woody undertones — the backbone of great espresso blends.',
-    image: robustaImg,
-    specs: { altitude: '600–900m', process: 'Natural', screen: 'AB', moisture: '11–12%' },
-  },
-  {
-    id: 4, category: 'robusta',
-    title: 'Robusta Parchment AB', origin: 'Kerala & Karnataka',
-    desc: 'Washed Robusta offering a cleaner profile with reduced bitterness and smooth body. Excellent for blending with Arabica for balanced espresso.',
-    image: greenBeansImg,
-    specs: { altitude: '600–800m', process: 'Washed', screen: 'AB', moisture: '10–12%' },
-  },
-  {
-    id: 5, category: 'monsooned', badge: 'Signature',
-    title: 'Monsooned Malabar AA', origin: 'Malabar Coast, Mangalore',
-    desc: 'India\'s legendary specialty — beans exposed to monsoon winds for 12–16 weeks in open warehouses. Produces an intensely mellow, low-acid cup with a golden hue and notes of spice, tobacco, and earth.',
-    image: monsoonedImg,
-    specs: { altitude: 'Coastal', process: 'Monsooned', screen: 'AA', moisture: '12–14%' },
-  },
-  {
-    id: 6, category: 'specialty', badge: 'Micro-lot',
-    title: 'Single Estate Selection', origin: 'Nilgiris, Tamil Nadu',
-    desc: 'Micro-lot coffees from select estates, scored 82+ by certified Q-graders. Each lot showcases unique terroir characteristics — floral, fruity, and exceptionally complex.',
-    image: specialtyImg,
-    specs: { altitude: '1,200–1,800m', process: 'Honey / Natural', screen: '16+', moisture: '10–11%' },
-  },
-]
+// Sub-Product Images
+import arabica_aaa from '../assets/images/arabica_aaa_1789668939338.jpg'
+import arabica_aa from '../assets/images/arabica_aa_1789668951811.jpg'
+import arabica_a from '../assets/images/arabica_a_1789668978286.jpg'
+import arabica_pb from '../assets/images/arabica_pb_1789668993295.jpg'
+import arabica_bulk from '../assets/images/arabica_bulk_1789669005693.jpg'
 
-const categories = [
-  { key: 'all', label: 'All Coffee' },
-  { key: 'arabica', label: 'Arabica' },
-  { key: 'robusta', label: 'Robusta' },
-  { key: 'monsooned', label: 'Monsooned' },
-  { key: 'specialty', label: 'Specialty' },
+import robusta_aaa from '../assets/images/robusta_aaa_1789669046273.jpg'
+import robusta_aa from '../assets/images/robusta_aa_1789669062571.jpg'
+import robusta_a from '../assets/images/robusta_a_1789669074245.jpg'
+import robusta_pb from '../assets/images/robusta_pb_1789669087404.jpg'
+import robusta_bulk from '../assets/images/robusta_bulk_1789669100162.jpg'
+
+import specialty_single from '../assets/images/specialty_single_1789669111835.jpg'
+import specialty_high from '../assets/images/specialty_high_1789669123915.jpg'
+
+export const productCategories = [
+  {
+    id: 'arabica',
+    title: 'Arabica Plantation',
+    image: arabicaImg,
+    subProducts: [
+      { title: 'AAA', desc: 'Superior quality Arabica beans with excellent size and uniform color.', image: arabica_aaa },
+      { title: 'AA', desc: 'Premium grade Arabica known for its clean cup and balanced flavor.', image: arabica_aa },
+      { title: 'A', desc: 'High-quality Arabica beans, perfect for single-origin roasting.', image: arabica_a },
+      { title: 'PB', desc: 'Peaberry Arabica offering concentrated flavors and wine-like acidity.', image: arabica_pb },
+      { title: 'BULK', desc: 'Bulk Arabica beans ideal for commercial blends and large-scale roasting.', image: arabica_bulk },
+    ]
+  },
+  {
+    id: 'robusta',
+    title: 'Robusta Parchment',
+    image: robustaImg,
+    subProducts: [
+      { title: 'AAA', desc: 'Top-tier washed Robusta with exceptional size and clean profile.', image: robusta_aaa },
+      { title: 'AA', desc: 'Premium Robusta parchment, offering a smooth body and reduced bitterness.', image: robusta_aa },
+      { title: 'A', desc: 'Standard high-grade Robusta, excellent for espresso blends.', image: robusta_a },
+      { title: 'PB', desc: 'Robusta Peaberry with intense, bold characteristics and heavy crema.', image: robusta_pb },
+      { title: 'BULK', desc: 'Bulk Robusta beans for strong, high-yield commercial coffee production.', image: robusta_bulk },
+    ]
+  },
+  {
+    id: 'specialty',
+    title: 'Speciality Beans',
+    image: specialtyImg,
+    subProducts: [
+      { title: 'Single Origin', desc: 'Micro-lot coffees from select estates showcasing unique terroir characteristics.', image: specialty_single },
+      { title: 'High Grown', desc: 'Beans cultivated at extreme altitudes for denser structure and complex flavor profiles.', image: specialty_high },
+    ]
+  }
 ]
 
 export default function ProductsPage() {
-  const [active, setActive] = useState('all')
-
-  const filtered = active === 'all' ? allProducts : allProducts.filter(p => p.category === active)
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 15 }}
@@ -91,55 +85,25 @@ export default function ProductsPage() {
         </motion.div>
       </section>
 
-      {/* Products Grid */}
+      {/* Main Categories Grid */}
       <section className="products-full">
         <div className="container">
-          <ScrollReveal>
-            <div className="products-filter">
-              {categories.map(cat => (
-                <button
-                  key={cat.key}
-                  className={`filter-btn ${active === cat.key ? 'active' : ''}`}
-                  onClick={() => setActive(cat.key)}
-                >
-                  {cat.label}
-                </button>
-              ))}
-            </div>
-          </ScrollReveal>
-
           <div className="products-full-grid">
-            {filtered.map((p, i) => (
-              <ScrollReveal key={p.id} delay={i * 0.1}>
-                <div className="product-full-card">
+            {productCategories.map((category, i) => (
+              <ScrollReveal key={category.id} delay={i * 0.1}>
+                <Link to={`/products/${category.id}`} className="product-full-card" style={{ display: 'block', textDecoration: 'none' }}>
                   <div className="product-full-image">
-                    <img src={p.image} alt={p.title} />
-                    {p.badge && <span className="product-full-badge">{p.badge}</span>}
+                    <img src={category.image} alt={category.title} />
                   </div>
                   <div className="product-full-body">
-                    <h3>{p.title}</h3>
-                    <div className="product-full-origin">{p.origin}</div>
-                    <p>{p.desc}</p>
-                    <div className="product-specs">
-                      <div className="product-spec">
-                        <span className="product-spec-label">Altitude</span>
-                        <span className="product-spec-value">{p.specs.altitude}</span>
-                      </div>
-                      <div className="product-spec">
-                        <span className="product-spec-label">Process</span>
-                        <span className="product-spec-value">{p.specs.process}</span>
-                      </div>
-                      <div className="product-spec">
-                        <span className="product-spec-label">Screen Size</span>
-                        <span className="product-spec-value">{p.specs.screen}</span>
-                      </div>
-                      <div className="product-spec">
-                        <span className="product-spec-label">Moisture</span>
-                        <span className="product-spec-value">{p.specs.moisture}</span>
-                      </div>
+                    <h3>{category.title}</h3>
+                    <p style={{ marginTop: '10px' }}>Explore our range of premium {category.title} beans, carefully sourced and graded for global export.</p>
+                    <div className="product-card-link" style={{ marginTop: '20px', color: 'var(--accent)', fontWeight: 'bold' }}>
+                      <span>View Grades & Sub-categories</span>
+                      <span className="arrow">→</span>
                     </div>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
@@ -156,7 +120,7 @@ export default function ProductsPage() {
               <p className="section-subtitle">Every lot is evaluated through a rigorous multi-step quality assurance protocol.</p>
             </div>
           </ScrollReveal>
-          <div className="why-grid">
+          <div className="process-grid">
             {[
               { icon: '🔬', title: 'Physical Analysis', desc: 'Screen size distribution, moisture content measurement, defect count per 300g sample, and color assessment using industry-standard equipment.' },
               { icon: '☕', title: 'Cupping Evaluation', desc: 'SCA protocol cupping by certified Q-graders evaluating fragrance, aroma, flavor, aftertaste, acidity, body, balance, uniformity, and overall score.' },

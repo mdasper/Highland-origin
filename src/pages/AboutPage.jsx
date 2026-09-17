@@ -16,7 +16,7 @@ export default function AboutPage() {
       {/* Page Hero */}
       <section className="page-hero">
         <div className="page-hero-bg">
-          <img src={estateHarvestImg} alt="About High Land Origin" />
+          <img src={estateHarvestImg} alt="About Highland Origin" />
         </div>
         <div className="page-hero-overlay" />
         <motion.div
@@ -44,56 +44,22 @@ export default function AboutPage() {
                 <div className="section-label">Who We Are</div>
                 <h2 className="section-title">Built on Passion & Purity</h2>
                 <p className="about-text">
-                  High Land Origin Private Limited was founded with a clear, ambitious mission:
-                  to bring the purest, highest-grade green coffee beans from India's lush highlands
-                  directly to specialty roasters and international buyers worldwide.
+                  Highland Origin Private Limited was founded with a clear and ambitious mission: to bring the finest green coffee beans from the majestic Western Ghats of India to specialty roasters and discerning buyers worldwide.
                 </p>
                 <p className="about-text">
-                  Our name reflects our identity — we source exclusively from highland regions
-                  where altitude, rich volcanic soils, and ideal rainfall create exceptional coffee
-                  profiles. From Chikmagalur and Coorg to Wayanad and the Nilgiris, we work closely
-                  with dedicated estate growers to handpick premium lots that meet global export standards.
+                  Our name reflects our identity — rooted in the highland plantations of the Western Ghats, where mist-covered mountains, fertile soils, abundant rainfall, and unique microclimates come together to create exceptional coffee-growing conditions. From the renowned coffee estates of Chikmagalur, Coorg, and Wayanad to the scenic plantations of the Nilgiris and Kodaikanal Hills, we work closely with dedicated growers to source premium Arabica and Robusta coffee beans that embody the character of their origin.
                 </p>
                 <p className="about-text">
-                  Every consignment we prepare is backed by stringent quality testing, Q-grading
-                  benchmarks, and transparent farm-to-port traceability — ensuring roasters receive
-                  fresh, defect-free green beans with outstanding cup profiles.
+                  Every consignment we prepare reflects our commitment to quality, consistency, and traceability. Through careful sourcing, rigorous quality assessment, and transparent farm-to-port supply chains, we deliver export-ready green coffee beans that preserve the distinctive character of India's Western Ghats — from their rich aroma and balanced cup profiles to the unique terroir shaped by the mountains.
+                </p>
+                <p className="about-text">
+                  At Highland Origin, we believe every coffee bean carries the story of its land, the dedication of its grower, and the natural richness of the Western Ghats. Our purpose is to connect that story with the world, one exceptional coffee lot at a time.
                 </p>
               </div>
             </ScrollReveal>
           </div>
 
-          <div className="about-full-grid">
-            <ScrollReveal direction="left">
-              <div>
-                <div className="section-label">Our Approach</div>
-                <h2 className="section-title">Farm-First Philosophy</h2>
-                <p className="about-text">
-                  We believe the best coffee starts at the farm. That's why we maintain direct
-                  relationships with over 2,000 farmer partners across the Western Ghats. Our
-                  agronomy team regularly visits estates, providing guidance on sustainable
-                  farming practices, optimal harvest timing, and post-harvest processing
-                  techniques.
-                </p>
-                <p className="about-text">
-                  This farm-first approach doesn't just ensure quality — it builds trust and
-                  livelihood security for the communities that grow our coffee. We pay fair
-                  premiums, offer advance financing during planting seasons, and invest in
-                  community development programs that uplift the next generation of coffee growers.
-                </p>
-                <p className="about-text">
-                  For our buyers, this translates into complete traceability, lot-specific
-                  documentation, and the confidence that every shipment meets both quality
-                  standards and ethical sourcing criteria.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal direction="right">
-              <div className="about-full-image">
-                <img src={farmerImg} alt="Coffee farmer in plantation" />
-              </div>
-            </ScrollReveal>
-          </div>
+
         </div>
       </section>
 
@@ -109,10 +75,7 @@ export default function AboutPage() {
               <div className="vm-card">
                 <h3>Our Vision</h3>
                 <p>
-                  To be recognized globally as India's most trusted and preferred green coffee
-                  export partner — known for uncompromising quality, ethical sourcing, and the
-                  ability to connect the world's finest roasters with the exceptional coffees
-                  grown in India's highland regions.
+                  Our vision is to establish Highland Origin Private Limited as a successful merchant exporter and progressively expand into a manufacturing exporter with our own coffee processing and plantation operations. Through continuous investment in quality, technology, and sustainable agricultural practices, we aim to build a trusted global coffee brand that connects the rich heritage of India's Western Ghats with discerning buyers worldwide.
                 </p>
               </div>
             </ScrollReveal>
@@ -131,34 +94,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="certifications">
-        <div className="container">
-          <ScrollReveal>
-            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-              <div className="section-label" style={{ justifyContent: 'center' }}>Trust & Compliance</div>
-              <h2>Certifications & Standards</h2>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <div className="cert-grid">
-              {[
-                { icon: '🏅', name: 'ISO 22000' },
-                { icon: '🌿', name: 'Organic Certified' },
-                { icon: '🛡️', name: 'FSSAI Licensed' },
-                { icon: '🌍', name: 'Rainforest Alliance' },
-                { icon: '☕', name: 'Q-Grade Certified' },
-                { icon: '📋', name: 'APEDA Registered' },
-              ].map(cert => (
-                <div key={cert.name} className="cert-item">
-                  <div className="cert-icon">{cert.icon}</div>
-                  <div className="cert-name">{cert.name}</div>
-                </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="cta-section">

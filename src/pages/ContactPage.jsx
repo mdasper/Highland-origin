@@ -61,7 +61,7 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📍</div>
                     <div>
                       <h4>Visit Us</h4>
-                      <p>HIGH LAND ORIGIN PRIVATE LIMITED<br />Chennai, Tamil Nadu<br />India</p>
+                      <p>Highland ORIGIN PRIVATE LIMITED<br />Chennai, Tamil Nadu<br />India</p>
                     </div>
                   </div>
                   <div className="contact-detail">

@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/Newlogo.jpeg'
 
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
   { path: '/products', label: 'Products' },
-  { path: '/sustainability', label: 'Sustainability' },
-  { path: '/infrastructure', label: 'Infrastructure' },
+  { path: '/export', label: 'Coffee Export' },
 ]
 
 export default function Navbar() {
@@ -30,9 +29,9 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="nav-logo" onClick={() => setMobileOpen(false)}>
-          <img src={logo} alt="High Land Origin Logo" />
+          <img src={logo} alt="Highland Origin Logo" style={{height: '75px', width: 'auto', borderRadius: '4px', marginRight: '15px'}} />
           <div className="nav-brand">
-            <span className="nav-brand-name">HIGH LAND ORIGIN</span>
+            <span className="nav-brand-name">HIGHLAND ORIGIN</span>
             <span className="nav-brand-sub">Private Limited</span>
           </div>
         </Link>

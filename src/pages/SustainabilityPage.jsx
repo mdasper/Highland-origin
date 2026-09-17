@@ -43,7 +43,7 @@ export default function SustainabilityPage() {
                 <div className="section-label">Our Commitment</div>
                 <h2 className="section-title">Coffee That Cares for the Earth</h2>
                 <p className="about-text">
-                  At High Land Origin, sustainability isn't a marketing buzzword — it's the
+                  At Highland Origin, sustainability isn't a marketing buzzword — it's the
                   foundation of everything we do. We believe that the finest coffee can only come
                   from healthy ecosystems and thriving farming communities. That's why we invest
                   deeply in practices that protect biodiversity, conserve water, enrich soil

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/Newlogo.jpeg'
 
 export default function LoadingScreen() {
   return (
@@ -59,7 +59,7 @@ export default function LoadingScreen() {
           <div className="welcome-logo-backdrop" />
           <img
             src={logo}
-            alt="High Land Origin Private Limited"
+            alt="Highland Origin Private Limited"
             className="welcome-logo-img"
           />
         </motion.div>
@@ -71,7 +71,7 @@ export default function LoadingScreen() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h1 className="welcome-brand-title">HIGH LAND ORIGIN</h1>
+          <h1 className="welcome-brand-title">HIGHLAND ORIGIN</h1>
           <div className="welcome-brand-sub">PRIVATE LIMITED</div>
 
           {/* Golden Divider */}
