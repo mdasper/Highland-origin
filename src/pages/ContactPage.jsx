@@ -110,7 +110,6 @@ export default function ContactPage() {
                     <div>
                       <h4>Email Us</h4>
                       <p><a href="mailto:ragujeyaraj3@gmail.com">ragujeyaraj3@gmail.com</a></p>
-                      <p><a href="mailto:exports@highlandorigin.com">exports@highlandorigin.com</a></p>
                     </div>
                   </div>
                   <div className="contact-detail">
