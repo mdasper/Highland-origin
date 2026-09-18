@@ -8,15 +8,56 @@ export default function ContactPage() {
     name: '', company: '', email: '', phone: '', product: '', volume: '', message: ''
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 4000)
+    setIsSubmitting(true)
+    
+    // Web3Forms configuration
+    const accessKey = "8d2be3a5-2d43-49e6-a2e9-d6dfb0429c6a" 
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New Coffee Inquiry from ${formData.name}`,
+          from_name: formData.name,
+          ...formData
+        }),
+      })
+
+      const result = await response.json()
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          product: '',
+          volume: '',
+          message: ''
+        })
+        setTimeout(() => setSubmitted(false), 5000)
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    } catch (error) {
+      console.error(error)
+      alert("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -68,7 +109,7 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📧</div>
                     <div>
                       <h4>Email Us</h4>
-                      <p><a href="mailto:info@highlandorigin.com">info@highlandorigin.com</a></p>
+                      <p><a href="mailto:ragujeyaraj3@gmail.com">ragujeyaraj3@gmail.com</a></p>
                       <p><a href="mailto:exports@highlandorigin.com">exports@highlandorigin.com</a></p>
                     </div>
                   </div>
@@ -76,14 +117,14 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📞</div>
                     <div>
                       <h4>Call Us</h4>
-                      <p><a href="tel:+916383945778">+91 63839 45778</a></p>
+                      <p><a href="tel:+917338885778">+91 73388 85778</a></p>
                     </div>
                   </div>
                   <div className="contact-detail">
                     <div className="contact-detail-icon">💬</div>
                     <div>
                       <h4>WhatsApp</h4>
-                      <p><a href="https://wa.me/916383945778" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
+                      <p><a href="https://wa.me/917338885778" target="_blank" rel="noopener noreferrer">Chat with us on WhatsApp</a></p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +150,7 @@ export default function ContactPage() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 63839 45778" />
+                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 73388 85778" />
                   </div>
                 </div>
                 <div className="form-row">
