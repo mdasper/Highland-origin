@@ -27,7 +27,7 @@ export default function CoffeeExportPage() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 0 5%' }}
+          style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto 0 5%', paddingTop: '80px' }}
         >
           <div className="section-label" style={{ marginBottom: '15px', color: 'var(--accent)' }}>Global Distribution Network</div>
           <h1 style={{ fontSize: '4rem', lineHeight: '1.1' }}>Seamless Global Coffee Export</h1>

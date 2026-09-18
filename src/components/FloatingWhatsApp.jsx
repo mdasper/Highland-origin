@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function FloatingWhatsApp() {
   const [mounted, setMounted] = useState(false)
-  const whatsappUrl = "https://wa.me/916383945778?text=Hello%20High%20Land%20Origin,%20I%20would%20like%20to%20inquire%20about%20green%20coffee%20beans."
+  const whatsappUrl = "https://wa.me/917338885778?text=Hello%20High%20Land%20Origin,%20I%20would%20like%20to%20inquire%20about%20green%20coffee%20beans."
 
   useEffect(() => {
     setMounted(true)

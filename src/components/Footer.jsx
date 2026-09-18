@@ -26,7 +26,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/916383945778?text=Hello%20High%20Land%20Origin,%20I%20would%20like%20to%20inquire%20about%20green%20coffee%20beans."
+                href="https://wa.me/917338885778?text=Hello%20High%20Land%20Origin,%20I%20would%20like%20to%20inquire%20about%20green%20coffee%20beans."
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -69,10 +69,10 @@ export default function Footer() {
                 Chennai, Tamil Nadu, India
               </p>
               <p className="footer-contact-item">
-                <a href="mailto:info@highlandorigin.com">info@highlandorigin.com</a>
+                <a href="mailto:ragujeyaraj3@gmail.com">ragujeyaraj3@gmail.com</a>
               </p>
               <p className="footer-contact-item">
-                <a href="tel:+916383945778">+91 63839 45778</a>
+                <a href="tel:+917338885778">+91 73388 85778</a>
               </p>
             </div>
           </div>
