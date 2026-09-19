@@ -102,14 +102,14 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📍</div>
                     <div>
                       <h4>Visit Us</h4>
-                      <p>Highland ORIGIN PRIVATE LIMITED<br />Chennai, Tamil Nadu<br />India</p>
+                      <p>HIGHLAND ORIGIN PRIVATE LIMITED<br />Chennai, Tamil Nadu<br />India</p>
                     </div>
                   </div>
                   <div className="contact-detail">
                     <div className="contact-detail-icon">📧</div>
                     <div>
                       <h4>Email Us</h4>
-                      <p><a href="mailto:ragujeyaraj3@gmail.com">ragujeyaraj3@gmail.com</a></p>
+                      <p><a href="mailto:highlandorigin26@gmail.com">highlandorigin26@gmail.com</a></p>
                     </div>
                   </div>
                   <div className="contact-detail">

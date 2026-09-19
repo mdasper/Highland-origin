@@ -220,24 +220,7 @@ export default function HomePage() {
                   of Wayanad and Nilgiris, Kodaikanal. Every bean we export carries the essence of its origin
                   — rich soil, pristine air, and generations of expertise.
                 </p>
-                <div className="about-features">
-                  <div className="about-feature">
-                    <span className="about-feature-icon">✓</span>
-                    <span>FSSAI Certified</span>
-                  </div>
-                  <div className="about-feature">
-                    <span className="about-feature-icon">✓</span>
-                    <span>ISO 22000 Standards</span>
-                  </div>
-                  <div className="about-feature">
-                    <span className="about-feature-icon">✓</span>
-                    <span>Direct Farm Sourcing</span>
-                  </div>
-                  <div className="about-feature">
-                    <span className="about-feature-icon">✓</span>
-                    <span>Q-Graded Quality</span>
-                  </div>
-                </div>
+
                 <Link to="/about" className="btn btn-outline" style={{ marginTop: '24px' }}>
                   Discover Our Story →
                 </Link>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import logo from '../assets/images/Newlogo.jpeg'
+import logo from '../assets/images/new_logo.jpg'
 
 const navItems = [
   { path: '/', label: 'Home' },
