@@ -65,11 +65,11 @@ export default function Footer() {
             <h4>Get in Touch</h4>
             <div className="footer-contact-details">
               <p className="footer-address">
-                <strong>Highland ORIGIN PRIVATE LIMITED</strong><br />
+                <strong>HIGHLAND ORIGIN PRIVATE LIMITED</strong><br />
                 Chennai, Tamil Nadu, India
               </p>
               <p className="footer-contact-item">
-                <a href="mailto:ragujeyaraj3@gmail.com">ragujeyaraj3@gmail.com</a>
+                <a href="mailto:highlandorigin26@gmail.com">highlandorigin26@gmail.com</a>
               </p>
               <p className="footer-contact-item">
                 <a href="tel:+917338885778">+91 73388 85778</a>
