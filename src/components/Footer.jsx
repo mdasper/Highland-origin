@@ -66,7 +66,8 @@ export default function Footer() {
             <div className="footer-contact-details">
               <p className="footer-address">
                 <strong>HIGHLAND ORIGIN PRIVATE LIMITED</strong><br />
-                Chennai, Tamil Nadu, India
+                2nd Floor, Door No. 16/21, Thiru Nagar, 1st Street (Abetting 100ft Road),<br />
+                Vadapalani, Chennai – 600026
               </p>
               <p className="footer-contact-item">
                 <a href="mailto:highlandorigin26@gmail.com">highlandorigin26@gmail.com</a>

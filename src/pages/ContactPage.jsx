@@ -102,7 +102,7 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📍</div>
                     <div>
                       <h4>Visit Us</h4>
-                      <p>HIGHLAND ORIGIN PRIVATE LIMITED<br />Chennai, Tamil Nadu<br />India</p>
+                      <p>HIGHLAND ORIGIN PRIVATE LIMITED<br />2nd Floor, Door No. 16/21, Thiru Nagar, 1st Street (Abetting 100ft Road),<br />Vadapalani, Chennai – 600026</p>
                     </div>
                   </div>
                   <div className="contact-detail">
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+91 73388 85778" />
+                    <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="Enter your phone number" />
                   </div>
                 </div>
                 <div className="form-row">
