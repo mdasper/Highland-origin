@@ -166,15 +166,15 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="volume">Estimated Volume</label>
-                    <select id="volume" name="volume" value={formData.volume} onChange={handleChange}>
-                      <option value="">Select volume</option>
-                      <option value="sample">Sample Request</option>
-                      <option value="1-5mt">1 – 5 MT</option>
-                      <option value="5-20mt">5 – 20 MT</option>
-                      <option value="20-50mt">20 – 50 MT</option>
-                      <option value="50+mt">50+ MT</option>
-                    </select>
+                    <label htmlFor="volume">Estimated Volume (kg)</label>
+                    <input
+                      type="text"
+                      id="volume"
+                      name="volume"
+                      value={formData.volume}
+                      onChange={handleChange}
+                      placeholder="e.g. 500 kg"
+                    />
                   </div>
                 </div>
                 <div className="form-group">
