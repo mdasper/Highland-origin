@@ -70,7 +70,7 @@ export default function Footer() {
                 Vadapalani, Chennai – 600026
               </p>
               <p className="footer-contact-item">
-                <a href="mailto:highlandorigin26@gmail.com">highlandorigin26@gmail.com</a>
+                <a href="mailto:info@highlandorigin.in">info@highlandorigin.in</a>
               </p>
               <p className="footer-contact-item">
                 <a href="tel:+917338885778">+91 73388 85778</a>

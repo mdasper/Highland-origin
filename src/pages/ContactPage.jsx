@@ -109,7 +109,7 @@ export default function ContactPage() {
                     <div className="contact-detail-icon">📧</div>
                     <div>
                       <h4>Email Us</h4>
-                      <p><a href="mailto:highlandorigin26@gmail.com">highlandorigin26@gmail.com</a></p>
+                      <p><a href="mailto:info@highlandorigin.in">info@highlandorigin.in</a></p>
                     </div>
                   </div>
                   <div className="contact-detail">
